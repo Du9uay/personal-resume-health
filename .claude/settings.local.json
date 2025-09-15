@@ -27,7 +27,19 @@
       "Bash([ -f \"echarts-background-map.js\" ])",
       "Bash([ -f \"worldZH.json\" ])",
       "Bash([ -d \"public\" ])",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(identify:*)",
+      "Bash(convert:*)",
+      "Bash(git revert:*)",
+      "Bash(for i in 1 2 3 4 5)",
+      "Bash(do echo \"=== 项目 $i ===\")",
+      "Bash(done)",
+      "mcp__serena__read_file",
+      "Bash(sips:*)",
+      "Bash(open:*)",
+      "Read(/tmp/poker-slides/**)",
+      "Read(/tmp/poker-slides/**)",
+      "Bash(git remote set-url:*)"
     ],
     "deny": []
   }
