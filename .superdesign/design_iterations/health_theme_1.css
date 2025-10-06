@@ -1,0 +1,54 @@
+:root {
+  /* 大健康产业主题色彩系统 */
+  --health-primary: #16a34a; /* 健康绿 - 生命力与健康 */
+  --health-secondary: #0ea5e9; /* 医疗蓝 - 专业与信任 */
+  --health-accent: #f97316; /* 温暖橙 - 关怀与活力 */
+  --health-light: #f0fdf4; /* 清新绿白 - 洁净感 */
+  --health-pure: #ffffff; /* 纯白 - 医疗洁净 */
+  --health-dark: #052e16; /* 深绿 - 专业稳重 */
+
+  /* 功能色彩 */
+  --health-emergency: #dc2626; /* 紧急红 */
+  --health-tech: #7c3aed; /* 科技紫 */
+  --health-data: #06b6d4; /* 数据青 */
+  --health-success: #10b981; /* 成功绿 */
+  --health-warning: #eab308; /* 警告黄 */
+
+  /* 渐变色 */
+  --health-gradient-1: linear-gradient(135deg, #16a34a 0%, #0ea5e9 100%);
+  --health-gradient-2: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%);
+  --health-gradient-3: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+
+  /* 字体系统 */
+  --font-primary: 'Plus Jakarta Sans', 'PingFang SC', sans-serif;
+  --font-medical: 'Inter', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* 间距系统 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* 圆角系统 */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* 阴影系统 - 柔和医疗风格 */
+  --shadow-sm: 0 1px 3px rgba(22, 163, 74, 0.1);
+  --shadow-md: 0 4px 6px rgba(22, 163, 74, 0.1), 0 2px 4px rgba(22, 163, 74, 0.06);
+  --shadow-lg: 0 10px 15px rgba(22, 163, 74, 0.1), 0 4px 6px rgba(22, 163, 74, 0.05);
+  --shadow-xl: 0 20px 25px rgba(22, 163, 74, 0.1), 0 10px 10px rgba(22, 163, 74, 0.04);
+  --shadow-glow: 0 0 20px rgba(22, 163, 74, 0.3);
+
+  /* 动画时长 */
+  --transition-fast: 150ms;
+  --transition-base: 300ms;
+  --transition-slow: 500ms;
+  --transition-slower: 700ms;
+}

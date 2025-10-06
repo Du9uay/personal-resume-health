@@ -1,0 +1,117 @@
+/* 现代化大健康产业主题 - 符合年轻人审美 */
+:root {
+  /* 主色调 - 现代医疗绿 */
+  --primary: oklch(0.65 0.18 150);           /* 清新薄荷绿 */
+  --primary-foreground: oklch(0.98 0.01 150);/* 几乎白色 */
+  --primary-dark: oklch(0.45 0.20 150);      /* 深绿色 */
+  --primary-light: oklch(0.85 0.12 150);     /* 浅绿色 */
+
+  /* 辅助色系 - 温暖渐变 */
+  --secondary: oklch(0.75 0.15 25);          /* 温暖橙 */
+  --secondary-foreground: oklch(0.15 0.02 25);
+  --accent: oklch(0.70 0.25 260);            /* 科技紫 */
+  --accent-foreground: oklch(0.98 0.01 260);
+
+  /* 背景色系 - 极简现代 */
+  --background: oklch(0.99 0.005 150);       /* 极浅绿白 */
+  --background-alt: oklch(0.97 0.01 150);    /* 替代背景 */
+  --surface: oklch(1.00 0 0);               /* 纯白表面 */
+  --surface-hover: oklch(0.98 0.01 150);    /* 悬浮状态 */
+
+  /* 文字色系 - 高对比度 */
+  --foreground: oklch(0.15 0.02 150);       /* 深色文字 */
+  --foreground-muted: oklch(0.45 0.03 150); /* 次要文字 */
+  --foreground-subtle: oklch(0.65 0.02 150);/* 微妙文字 */
+
+  /* 边框色系 */
+  --border: oklch(0.90 0.02 150);           /* 主边框 */
+  --border-light: oklch(0.95 0.01 150);     /* 浅边框 */
+  --border-accent: oklch(0.65 0.18 150);    /* 强调边框 */
+
+  /* 状态色系 */
+  --success: oklch(0.60 0.20 140);          /* 成功绿 */
+  --warning: oklch(0.75 0.18 60);           /* 警告橙 */
+  --error: oklch(0.60 0.25 20);             /* 错误红 */
+  --info: oklch(0.65 0.20 220);             /* 信息蓝 */
+
+  /* 渐变色 - 现代风格 */
+  --gradient-primary: linear-gradient(135deg,
+    oklch(0.65 0.18 150) 0%,
+    oklch(0.70 0.20 160) 50%,
+    oklch(0.75 0.15 25) 100%);
+  --gradient-secondary: linear-gradient(135deg,
+    oklch(0.70 0.25 260) 0%,
+    oklch(0.65 0.18 150) 100%);
+  --gradient-surface: linear-gradient(135deg,
+    oklch(1.00 0 0) 0%,
+    oklch(0.98 0.01 150) 100%);
+  --gradient-glass: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.05) 100%);
+
+  /* 字体系统 - 现代化 */
+  --font-display: 'Outfit', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --font-accent: 'Space Grotesk', 'PingFang SC', sans-serif;
+
+  /* 尺寸系统 - 8pt网格 */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 0.75rem;   /* 12px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+
+  /* 圆角系统 - 现代化 */
+  --radius-xs: 0.25rem;    /* 4px */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.5rem;     /* 24px */
+  --radius-2xl: 2rem;      /* 32px */
+  --radius-full: 9999px;   /* 圆形 */
+
+  /* 阴影系统 - 深度感 */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --shadow-2xl: 0 24px 48px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  /* 特殊阴影 - 品牌色 */
+  --shadow-primary: 0 8px 24px rgba(16, 185, 129, 0.15);
+  --shadow-accent: 0 8px 24px rgba(139, 92, 246, 0.15);
+  --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.20);
+
+  /* 毛玻璃效果 */
+  --glass-backdrop: blur(20px) saturate(180%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+
+  /* 动画时长 */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+
+  /* 缓动函数 */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Z-index层级 */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}

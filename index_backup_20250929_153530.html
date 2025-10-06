@@ -1381,18 +1381,6 @@
         .close-btn:hover {
             background: rgba(255, 255, 255, 0.3) !important;
         }
-        /* 确保SVG图标正确显示 */
-        .close-btn svg, .back-to-top svg {
-            pointer-events: none !important;
-            display: block !important;
-            stroke: currentColor !important;
-            fill: none !important;
-            vertical-align: middle !important;
-        }
-        /* 回到顶部按钮样式增强 */
-        .back-to-top svg {
-            margin: auto !important;
-        }
 
         /* 横向流程导航栏 */
         .project-flow-nav {
@@ -2202,9 +2190,7 @@
 
     <!-- Back to Top Button -->
     <button class='back-to-top' id='backToTop'>
-        <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
-            <polyline points='18,15 12,9 6,15'></polyline>
-        </svg>
+        <i data-lucide='chevron-up' class='w-5 h-5'></i>
     </button>
 
     <!-- Project Modal -->
@@ -2215,21 +2201,8 @@
     </div>
 
     <script>
-        // Initialize Lucide icons after DOM is loaded (for remaining icons)
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-
-        // Re-initialize icons after page load (fallback)
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            }, 200);
-        });
+        // Initialize Lucide icons
+        lucide.createIcons();
 
         // Scroll progress and navbar effects
         window.addEventListener('scroll', () => {
@@ -2633,13 +2606,6 @@
             modal.style.opacity = '1';
             modal.style.pointerEvents = 'auto';
             document.body.style.overflow = 'hidden';
-
-            // Re-initialize Lucide icons for modal content
-            setTimeout(() => {
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            }, 100);
         }
 
         function switchFlow(projectId, flowIndex) {

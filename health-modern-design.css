@@ -1,0 +1,442 @@
+/* Modern Health Industry Resume - Creative Design System */
+
+/* 设计理念：结合大健康产业的专业性与现代杂志式美学 */
+
+:root {
+  /* Enhanced Color System - 大健康产业色彩体系 */
+  --primary-gradient: linear-gradient(135deg,
+    oklch(0.65 0.15 150) 0%,
+    oklch(0.55 0.18 145) 100%);
+
+  --healing-green: oklch(0.60 0.12 150);
+  --wellness-blue: oklch(0.55 0.10 200);
+  --vitality-teal: oklch(0.58 0.14 180);
+  --care-mint: oklch(0.70 0.08 160);
+
+  /* Background System */
+  --bg-primary: oklch(0.12 0.02 150);
+  --bg-secondary: oklch(0.15 0.03 152);
+  --bg-card: oklch(0.18 0.04 148);
+  --bg-elevated: oklch(0.22 0.05 145);
+
+  /* Text Colors */
+  --text-primary: oklch(0.95 0.01 150);
+  --text-secondary: oklch(0.75 0.02 150);
+  --text-accent: oklch(0.65 0.15 150);
+
+  /* Glass Morphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+
+  /* Modern Typography Scale */
+  --text-display: clamp(3rem, 8vw, 6rem);
+  --text-hero: clamp(2rem, 5vw, 3.5rem);
+  --text-title: clamp(1.5rem, 4vw, 2.5rem);
+  --text-heading: clamp(1.25rem, 3vw, 1.75rem);
+
+  /* Spacing System */
+  --space-xs: clamp(0.5rem, 2vw, 1rem);
+  --space-sm: clamp(1rem, 3vw, 1.5rem);
+  --space-md: clamp(1.5rem, 4vw, 2.5rem);
+  --space-lg: clamp(2rem, 6vw, 4rem);
+  --space-xl: clamp(3rem, 8vw, 6rem);
+
+  /* Border Radius */
+  --radius-fluid: clamp(1rem, 2vw, 2rem);
+  --radius-organic: clamp(1.5rem, 3vw, 3rem);
+
+  /* Shadows */
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 16px 64px rgba(0, 0, 0, 0.16);
+  --shadow-strong: 0 24px 96px rgba(0, 0, 0, 0.20);
+}
+
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Modern Container System */
+.modern-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Hero Section - Asymmetric Design */
+.hero-modern {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  padding: var(--space-xl) 0;
+}
+
+.hero-title {
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+
+.hero-subtitle {
+  font-size: var(--text-heading);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  font-weight: 300;
+}
+
+.hero-visual {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
+  border-radius: var(--radius-organic);
+  object-fit: cover;
+  border: 4px solid var(--glass-border);
+  box-shadow: var(--shadow-strong);
+  position: relative;
+  z-index: 2;
+}
+
+/* About Section - Magazine Layout */
+.about-modern {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0;
+  min-height: 60vh;
+  align-items: center;
+}
+
+.about-info {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-fluid);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.section-title {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  color: var(--text-accent);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+/* Projects Section - Masonry Layout */
+.projects-modern {
+  margin: var(--space-xl) 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.project-card-modern {
+  background: var(--bg-card);
+  border-radius: var(--radius-fluid);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--healing-green);
+}
+
+.project-card-modern:nth-child(odd) {
+  transform: translateY(20px);
+}
+
+.project-image-modern {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-modern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card-modern:hover .project-image-modern img {
+  transform: scale(1.05);
+}
+
+.project-overlay-modern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-md);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card-modern:hover .project-overlay-modern {
+  opacity: 1;
+}
+
+.project-content-modern {
+  padding: var(--space-lg);
+}
+
+.project-title-modern {
+  font-size: var(--text-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.project-description-modern {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-meta-modern {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-fluid);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--glass-border);
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.meta-label {
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+.meta-value {
+  color: var(--text-secondary);
+}
+
+.project-tags-modern {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.tag-modern {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--healing-green);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: var(--glass-blur);
+}
+
+.project-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-modern {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-fluid);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-modern:hover::before {
+  left: 100%;
+}
+
+/* Background Decorations */
+.bg-decoration {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decoration-1 {
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle,
+    var(--healing-green) 0%,
+    transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.decoration-2 {
+  bottom: 20%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle,
+    var(--wellness-blue) 0%,
+    transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-modern {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .about-modern {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-modern:nth-child(odd) {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-title {
+    font-size: var(--text-hero);
+  }
+
+  .projects-grid {
+    gap: var(--space-md);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--healing-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vitality-teal);
+}
